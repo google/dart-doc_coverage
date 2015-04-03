@@ -1,9 +1,12 @@
 name: doc_coverage
+version: 0.1.1
+author: Sam Rawlins <srawlins@google.com>
 description: Analyze the quality of your package's public documentation.
+homepage: https://github.com/google/dart-doc_coverage
 dependencies:
   args: any
   browser: any
   html: '>=0.12.0 <0.13.0'
-  route: any
+  route: '>=0.4.6'
 dev_dependencies:
   unittest: '>=0.11.0'
