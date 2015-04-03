@@ -3,11 +3,10 @@
 
 import 'dart:io';
 
-import 'package:shapeshift/doc_coverage_cli.dart';
+import 'package:doc_coverage/doc_coverage_cli.dart';
+import 'package:doc_coverage/doc_coverage_common.dart';
 import 'package:args/args.dart';
 
-import 'package:shapeshift/shapeshift_cli.dart';
-import 'package:shapeshift/shapeshift_common.dart';
 
 class DocCoverage {
   ArgResults args;

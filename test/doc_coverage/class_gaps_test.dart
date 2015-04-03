@@ -5,7 +5,7 @@
 library class_gaps_tests;
 
 import 'dart:convert';
-import 'package:shapeshift/doc_coverage_common.dart';
+import 'package:doc_coverage/doc_coverage_common.dart';
 import 'package:unittest/unittest.dart';
 
 void main() {

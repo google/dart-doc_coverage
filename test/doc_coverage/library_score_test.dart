@@ -1,10 +1,10 @@
 // Copyright 2014 Google Inc. All Rights Reserved.
 // Licensed under the Apache License, Version 2.0, found in the LICENSE file.
 
-/// Unit tests for shapeshift's Doc Coverage tool.
+/// Unit tests for library scores.
 library library_score_tests;
 
-import 'package:shapeshift/doc_coverage_common.dart';
+import 'package:doc_coverage/doc_coverage_common.dart';
 import 'package:unittest/unittest.dart';
 
 Map<String, dynamic> get libraryTemplate => {

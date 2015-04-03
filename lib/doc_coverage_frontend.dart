@@ -6,13 +6,10 @@ library doc_coverage_frontend;
 import 'dart:convert';
 import 'dart:html';
 
-import 'package:shapeshift/shapeshift_common.dart';
-import 'package:shapeshift/shapeshift_frontend.dart';
-
-import './doc_coverage_common.dart';
-//import '../web/doc_coverage.dart';
+import 'doc_coverage_common.dart';
 
 part 'src/frontend/class_doc_analyzer.dart';
+part 'src/frontend/dartdoc_viewer_utils.dart';
 part 'src/frontend/doc_coverage_elements.dart';
 part 'src/frontend/error_handlers.dart';
 part 'src/frontend/function_doc_analyzer.dart';

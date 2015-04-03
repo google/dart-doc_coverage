@@ -6,7 +6,8 @@ library doc_coverage_cli;
 import 'dart:io';
 import 'dart:math';
 
-import './shapeshift_common.dart';
-import './doc_coverage_common.dart';
+import 'doc_coverage_common.dart';
 
+part 'src/cli/directory_writer.dart';
 part 'src/cli/doc_coverage_reporter.dart';
+part 'src/cli/single_sink_writer.dart';

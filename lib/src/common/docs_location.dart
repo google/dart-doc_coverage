@@ -2,7 +2,7 @@
 // for details. All rights reserved. Use of this source code is governed by a
 // BSD-style license that can be found in the LICENSE file.
 
-part of shapeshift_common;
+part of doc_coverage_common;
 
 // A commonized form of dartdoc_viewer's DocsLocation.
 

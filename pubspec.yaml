@@ -1,12 +1,9 @@
-name: shapeshift
-description: Understand how the shape of your Dart package is shifting.
+name: doc_coverage
+description: Analyze the quality of your package's public documentation.
 dependencies:
   args: any
   browser: any
-  diff_match_patch: '>=0.2.1'
   html: '>=0.12.0 <0.13.0'
-  json_diff: '>=0.1.0 <1.0.0'
-  path: '>=1.3.3 <2.0.0'
   route: any
 dev_dependencies:
   unittest: '>=0.11.0'

@@ -8,7 +8,7 @@ import 'dart:js';
 import 'package:route/client.dart';
 import 'package:route/url_pattern.dart';
 
-import 'package:shapeshift/doc_coverage_frontend.dart';
+import 'package:doc_coverage/doc_coverage_frontend.dart';
 
 UrlPattern baseUrl = new UrlPattern(r'(.*).html');
 UrlPattern libraryScoreUrl = new UrlPattern(r'(.*)#/library/([^/]*)/');
