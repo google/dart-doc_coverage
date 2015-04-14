@@ -5,7 +5,7 @@ part of doc_coverage_cli;
 
 class DocCoverageReporter {
   final String path;
-  final Writer writer;
+  final WriterProvider writer;
   final Map<String, Map> gaps = new Map();
   MarkdownWriter io;
 

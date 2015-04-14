@@ -23,9 +23,9 @@ class DocCoverage {
       path += "/${args['subset']}";
     }
 
-    Writer w = (args['out'] == null)
-        ? new SingleSinkWriter(stdout)
-        : new DirectoryWriter(args['out']);
+    WriterProvider w = (args['out'] == null)
+        ? new SingleSinkWriterProvider(stdout)
+        : new DirectoryWriterProvider(args['out']);
 
     new DocCoverageReporter(path, writer: w)
       ..calculateAllCoverage()

@@ -3,11 +3,11 @@
 
 part of doc_coverage_cli;
 
-class DirectoryWriter extends Writer {
+class DirectoryWriterProvider extends WriterProvider {
   String path;
   Directory dir;
 
-  DirectoryWriter(this.path) {
+  DirectoryWriterProvider(this.path) {
     dir = new Directory(path)
       ..createSync(recursive: true);
   }

@@ -8,6 +8,6 @@ import 'dart:math';
 
 import 'doc_coverage_common.dart';
 
-part 'src/cli/directory_writer.dart';
+part 'src/cli/directory_writer_provider.dart';
 part 'src/cli/doc_coverage_reporter.dart';
-part 'src/cli/single_sink_writer.dart';
+part 'src/cli/single_sink_writer_provider.dart';

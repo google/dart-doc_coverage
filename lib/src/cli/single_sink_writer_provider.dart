@@ -3,9 +3,9 @@
 
 part of doc_coverage_cli;
 
-class SingleSinkWriter extends Writer {
+class SingleSinkWriterProvider extends WriterProvider {
   IOSink sink;
-  SingleSinkWriter(this.sink);
+  SingleSinkWriterProvider(this.sink);
 
   /// In the SingleSinkWriter, the writer is simple the original sink.
   MarkdownWriter writerFor(String _) => new MarkdownWriter(() => sink, false);

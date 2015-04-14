@@ -3,6 +3,6 @@
 
 part of doc_coverage_common;
 
-abstract class Writer {
+abstract class WriterProvider {
   MarkdownWriter writerFor(String libraryName);
 }
