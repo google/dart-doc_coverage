@@ -6,11 +6,12 @@ part of doc_coverage_common;
 class MarkdownWriter {
   final Function openIo;
   final bool shouldClose;
+  final bool shouldWriteMetadata;
 
   StringSink _io;
   String buffer, h1Buffer, h2Buffer;
 
-  MarkdownWriter(this.openIo, this.shouldClose);
+  MarkdownWriter(this.openIo, {this.shouldClose: true, this.shouldWriteMetadata: true});
 
   get io {
     if (_io == null) {
@@ -76,6 +77,9 @@ class MarkdownWriter {
   }
 
   void writeMetadata(String packageName) {
+    if (!shouldWriteMetadata)
+      return;
+
     buffer = """---
 layout: page
 title: $packageName
