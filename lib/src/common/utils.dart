@@ -103,14 +103,17 @@ String variableSignature(Map<String, Object> variable) {
 
 // TODO: just steal this from dartdoc-viewer
 String methodSignature(Map<String, Object> method,
-    {bool includeComment: true, bool includeAnnotations: true}) {
-  String name = method['name'];
-  String type = simpleType(method['return']);
-  if (name == '') {
-    // Apparently this used to be an issue... I can't recreate it.
-    throw new Exception();
+    {bool includeComment: true, bool includeAnnotations: true,
+     bool includeReturn: true, bool includeParens: true}) {
+  String s = method['name'];
+  if (s == '') {
+    // Probably a constructor, can fetch class name from qualifiedName.
+    s = new RegExp(r'\.([^.]+)-$').firstMatch(method['qualifiedName'])[1];
   }
-  String s = '$type $name';
+  if (includeReturn) {
+    String type = simpleType(method['return']);
+    s = '$type $s';
+  }
   if (includeComment) {
     s = formattedComment(method['comment']) + s;
   }
@@ -119,11 +122,13 @@ String methodSignature(Map<String, Object> method,
       s = formattedAnnotation(annotation, backticks: false) + '\n' + s;
     });
   }
-  List<String> p = new List<String>();
-  (method['parameters'] as Map).forEach((k, v) {
-    p.add(parameterSignature(v));
-  });
-  s = '$s(${p.join(', ')})';
+  if (includeParens) {
+    List<String> p = new List<String>();
+    (method['parameters'] as Map).forEach((k, v) {
+      p.add(parameterSignature(v));
+    });
+    s = '$s(${p.join(', ')})';
+  }
   return s;
 }
 

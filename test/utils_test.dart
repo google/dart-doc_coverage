@@ -29,6 +29,36 @@ void main() {
     expect(formattedAnnotation(ann, backticks: false), equals('@Foo'));
   });
 
+  group('Shapeshift utils: methodSignature', () {
+    List<Map> type = [{'outer': 'String', 'inner': ''}];
+    Map method = {
+      'name': 'foo',
+      'qualifiedName': 'dart-foo.Foo.foo',
+      'comment': '',
+      'return': type,
+      'annotations': [],
+      'parameters': new Map(),
+      //'constant': false,
+      //'final': false,
+      'static': false,
+    };
+
+    test('of plain ole\' method', () {
+      expect(methodSignature(method), equals('String foo()'));
+    });
+
+    test('of getter method', () {
+      expect(methodSignature(method, includeParens: false), equals('String foo'));
+    });
+
+    test('of constructor method', () {
+      Map m = new Map.from(method)
+        ..['name'] = ''
+        ..['qualifiedName'] = 'dart-foo.Foo.Foo-';
+      expect(methodSignature(m, includeReturn: false), equals('Foo()'));
+    });
+  });
+
   group('Shapeshift utils: variableSignature', () {
     List<Map> type = [{'outer': 'String', 'inner': ''}];
     Map variable = {
@@ -40,7 +70,7 @@ void main() {
       'static': false,
     };
 
-    test('of plane ole\' variable', () {
+    test('of plain ole\' variable', () {
       expect(variableSignature(variable), equals('String foo;'));
     });
 
