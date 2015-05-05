@@ -5,7 +5,7 @@
 library library_score_tests;
 
 import 'package:doc_coverage/doc_coverage_common.dart';
-import 'package:unittest/unittest.dart';
+import 'package:test/test.dart';
 
 Map<String, dynamic> get libraryTemplate => {
   "name": "foo",

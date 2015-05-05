@@ -6,7 +6,7 @@ library class_score_tests;
 
 import 'dart:convert';
 import 'package:doc_coverage/doc_coverage_common.dart';
-import 'package:unittest/unittest.dart';
+import 'package:test/test.dart';
 
 Map<String, dynamic> classTemplate = {
   "name": "Foo",

@@ -5,7 +5,7 @@
 library utils_tests;
 
 import 'package:doc_coverage/doc_coverage_common.dart';
-import 'package:unittest/unittest.dart';
+import 'package:test/test.dart';
 
 void main() {
   test('Shapeshift utils: pluralize pluralizes', () {
@@ -30,7 +30,7 @@ void main() {
   });
 
   group('Shapeshift utils: methodSignature', () {
-    List<Map> type = [{'outer': 'String', 'inner': ''}];
+    List<Map> type = [{'outer': 'String', 'inner': []}];
     Map method = {
       'name': 'foo',
       'qualifiedName': 'dart-foo.Foo.foo',
@@ -60,7 +60,7 @@ void main() {
   });
 
   group('Shapeshift utils: variableSignature', () {
-    List<Map> type = [{'outer': 'String', 'inner': ''}];
+    List<Map> type = [{'outer': 'String', 'inner': []}];
     Map variable = {
       'name': 'foo',
       'type': type,
