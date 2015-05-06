@@ -1,5 +1,5 @@
 name: doc_coverage
-version: 0.1.4
+version: 0.1.5
 author: Sam Rawlins <srawlins@google.com>
 description: Analyze the quality of your package's public documentation.
 homepage: https://github.com/google/dart-doc_coverage
