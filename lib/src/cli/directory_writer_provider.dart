@@ -24,6 +24,9 @@ class DirectoryWriterProvider extends WriterProvider {
       return f.openWrite();
     }
 
-    return new MarkdownWriter(fileTargetBuilder, shouldClose: true);
+    return writerCtor(fileTargetBuilder, shouldClose: true);
   }
+
+  MarkdownWriter writerCtor(fileTargetBuilder, {bool shouldClose: true}) =>
+      new MarkdownWriter(fileTargetBuilder, shouldClose: shouldClose);
 }
